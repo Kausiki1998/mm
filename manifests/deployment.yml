@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kausiki111 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kausiki111
+  template:
+    metadata:
+      labels:
+        app: kausiki111 
+    spec:
+      containers:
+        - name: kausiki111 
+          image: kausikisamadder19.azurecr.io/kausiki111
+          ports:
+          - containerPort: 80
